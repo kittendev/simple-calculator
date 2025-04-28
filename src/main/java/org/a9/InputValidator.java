@@ -17,7 +17,7 @@ public class InputValidator {
         System.out.print("Masukkan operator (+, -, *, /): ");
         String operator = scanner.next();
         if (!operator.matches("[+\\-*/]")) {
-            throw new IllegalArgumentException("Input tidak valid.");
+            throw new IllegalArgumentException("Operator tidak valid.");
         }
         return operator;
     }
