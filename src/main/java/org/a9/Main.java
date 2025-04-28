@@ -6,8 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Kalkulator Sederhana");
-        System.out.println("---------------------");
+        ConsolePrinter.printWelcomeMessage();
 
         try {
             double num1 = InputValidator.getNumber("Masukkan angka pertama: ");
@@ -33,9 +32,9 @@ public class Main {
                     break;
             }
 
-            System.out.println("Hasil: " + (result == (int) result ? (int) result : String.format("%.5f", result)));
+            ConsolePrinter.printResult(result);
         } catch (ArithmeticException | IllegalArgumentException e) {
-            System.out.println("Error: " + e.getMessage());
+            ConsolePrinter.printError(e.getMessage());
         }
 
         InputValidator.closeScanner();
