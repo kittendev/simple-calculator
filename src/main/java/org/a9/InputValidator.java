@@ -7,9 +7,8 @@ public class InputValidator {
 
     public static double getNumber(String prompt) {
         System.out.print(prompt);
-        while (!scanner.hasNextDouble()) {
-            System.out.print("Input tidak valid. Silakan masukkan angka: ");
-            scanner.next();
+        if (!scanner.hasNextDouble()) {
+            throw new IllegalArgumentException("Input tidak valid.");
         }
         return scanner.nextDouble();
     }
@@ -17,9 +16,8 @@ public class InputValidator {
     public static String getOperator() {
         System.out.print("Masukkan operator (+, -, *, /): ");
         String operator = scanner.next();
-        while (!operator.matches("[+\\-*/]")) {
-            System.out.print("Operator tidak valid. Silakan masukkan operator (+, -, *, /): ");
-            operator = scanner.next();
+        if (!operator.matches("[+\\-*/]")) {
+            throw new IllegalArgumentException("Input tidak valid.");
         }
         return operator;
     }
