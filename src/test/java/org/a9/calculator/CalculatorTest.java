@@ -1,4 +1,5 @@
-import org.a9.Calculator;
+package org.a9.calculator;
+
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
