@@ -10,7 +10,12 @@ public class InputValidator {
         if (!scanner.hasNextDouble()) {
             throw new IllegalArgumentException("Input tidak valid.");
         }
-        return scanner.nextDouble();
+
+        double number = scanner.nextDouble();
+        if (number < -32768 || number > 32767) {
+            throw new IllegalArgumentException("Input harus antara -32768 dan 32767.");
+        }
+        return number;
     }
 
     public static String getOperator() {
