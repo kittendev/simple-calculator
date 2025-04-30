@@ -10,7 +10,7 @@ public class Main {
 
         try {
             double num1 = InputValidator.getNumber("Masukkan angka pertama: ");
-            String operator = InputValidator.getOperator();
+            String operator = InputValidator.getOperator("Masukkan operator (+, -, *, /): ");
             double num2 = InputValidator.getNumber("Masukkan angka kedua: ");
 
             double result = 0;
@@ -36,7 +36,5 @@ public class Main {
         } catch (ArithmeticException | IllegalArgumentException e) {
             ConsolePrinter.printError(e.getMessage());
         }
-
-        InputValidator.closeScanner();
     }
 }
