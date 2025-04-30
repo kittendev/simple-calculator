@@ -1,4 +1,4 @@
-package org.a9;
+package org.a9.calculator;
 
 public class ConsolePrinter {
     public static void printResult(double result) {
