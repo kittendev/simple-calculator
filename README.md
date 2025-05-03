@@ -17,7 +17,7 @@
   <p align="center">
     Sebuah aplikasi kalkulator sederhana yang ditulis dalam bahasa pemrograman Java.
     <br />
-    <a href="https://github.com/kittendev/simple-calculator"><strong>Explore the docs »</strong></a>
+    <a href="https://kittendev.github.io/simple-calculator/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
   </p>
