@@ -1,19 +1,18 @@
 package org.a9.calculator;
 
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-
+/**
+ * Kelas ini adalah kelas dasar untuk pengujian unit pada kelas Calculator.
+ * Kelas ini menyediakan instance dari Calculator dan nilai delta yang digunakan dalam pengujian.
+ *
+ *  @version 1.0
+ *  @since 2025-05-03
+ *  @author Dafa
+ */
 public class CalculatorTest {
 
-    Calculator calc = new Calculator();
+    // Create an instance of the Calculator class
+    protected final Calculator calc = new Calculator();
 
-    @Test
-    public void testAdd() {
-        assertEquals(5, calc.add(2, 3));
-    }
-
-    @Test
-    public void testSubtract() {
-        assertEquals(1, calc.subtract(3, 2));
-    }
+    // Delta value for floating point comparisons
+    protected final double DELTA = 1e-5;
 }
