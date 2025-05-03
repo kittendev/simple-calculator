@@ -10,6 +10,10 @@ package org.a9.calculator;
  */
 public class Calculator {
 
+    Calculator () {
+        // Constructor default
+    }
+
     /**
      * Metode ini digunakan untuk menjumlahkan dua angka.
      *
