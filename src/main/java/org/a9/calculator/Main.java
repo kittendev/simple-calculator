@@ -1,5 +1,7 @@
 package org.a9.calculator;
 
+import java.util.Scanner;
+
 public class Main {
 
     private final static Calculator calculator = new Calculator();
@@ -8,10 +10,10 @@ public class Main {
 
         ConsolePrinter.printWelcomeMessage();
 
-        try {
-            double num1 = InputValidator.getNumber("Masukkan angka pertama: ");
-            String operator = InputValidator.getOperator("Masukkan operator (+, -, *, /): ");
-            double num2 = InputValidator.getNumber("Masukkan angka kedua: ");
+        try (Scanner scanner = new Scanner(System.in)){
+            double num1 = InputValidator.getNumber(scanner, "Masukkan angka pertama: ");
+            String operator = InputValidator.getOperator(scanner, "Masukkan operator (+, -, *, /): ");
+            double num2 = InputValidator.getNumber(scanner, "Masukkan angka kedua: ");
 
             double result = 0;
 

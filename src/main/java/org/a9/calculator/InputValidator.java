@@ -1,13 +1,11 @@
 package org.a9.calculator;
 
-import  java.util.Scanner;
+import java.util.Scanner;
 
 public class InputValidator {
-    private final static Scanner scanner = new Scanner(System.in);
 
-    public static double getNumber(String prompt) {
+    public static double getNumber(Scanner scanner, String prompt) {
         System.out.print(prompt);
-        Scanner scanner = new Scanner(System.in); // Scanner dibuat baru
         if (!scanner.hasNextDouble()) {
             throw new IllegalArgumentException("Input tidak valid.");
         }
@@ -19,14 +17,12 @@ public class InputValidator {
         return number;
     }
 
-    public static String getOperator(String prompt) {
+    public static String getOperator(Scanner scanner, String prompt) {
         System.out.print(prompt);
-        Scanner scanner = new Scanner(System.in); // Scanner dibuat baru
         String operator = scanner.next();
         if (!operator.matches("[+\\-*/]")) {
             throw new IllegalArgumentException("Operator tidak valid.");
         }
         return operator;
     }
-
 }
