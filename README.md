@@ -109,6 +109,8 @@ Aplikasi ini memiliki antarmuka CLI yang sederhana dan mendukung operasi dasar s
 └── README.md
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
