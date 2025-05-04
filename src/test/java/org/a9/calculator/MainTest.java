@@ -85,7 +85,7 @@ public class MainTest {
     @DisplayName("Simulasi input 5 * 3 dan verifikasi output lengkap")
     public void testMainMethodWithValidInputCalculatorMultiply() {
         // Simulasi input dari user: angka pertama, operator, angka kedua
-        String simulatedInput = "5\n+\n3\n";
+        String simulatedInput = "5\n*\n3\n";
         InputStream originalIn = System.in;
         PrintStream originalOut = System.out;
 

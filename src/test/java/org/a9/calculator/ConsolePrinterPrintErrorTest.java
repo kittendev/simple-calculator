@@ -24,17 +24,16 @@ public class ConsolePrinterPrintErrorTest {
 
         String simulatedErrorMessage = "Input tidak valid.";
 
-        PrintStream originalOut = System.out;
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
+        PrintStream originalErr = System.err;
+        ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+        System.setErr(new PrintStream(errContent));
 
         ConsolePrinter.printError(simulatedErrorMessage);
 
-        System.setOut(originalOut);
+        System.setErr(originalErr); // kembalikan System.err ke default
 
         String expectedOutput = "Error: " + simulatedErrorMessage + System.lineSeparator();
-
-        assertEquals(expectedOutput, outContent.toString());
+        assertEquals(expectedOutput, errContent.toString());
     }
     @Test
     @DisplayName("Tampilan Interface Console Error Input Diluar Batas")
@@ -42,34 +41,33 @@ public class ConsolePrinterPrintErrorTest {
 
         String simulatedErrorMessage = "Input harus antara -32768 dan 32767.";
 
-        PrintStream originalOut = System.out;
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
+        PrintStream originalErr = System.err;
+        ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+        System.setErr(new PrintStream(errContent));
 
         ConsolePrinter.printError(simulatedErrorMessage);
 
-        System.setOut(originalOut);
+        System.setErr(originalErr); // kembalikan System.err ke default
 
         String expectedOutput = "Error: " + simulatedErrorMessage + System.lineSeparator();
-
-        assertEquals(expectedOutput, outContent.toString());
+        assertEquals(expectedOutput, errContent.toString());
     }
+
     @Test
     @DisplayName("Tampilan Interface Console Error Input Operator")
     public void testShowInitialErrorOperatorInterfaceOutput() {
 
         String simulatedErrorMessage = "Operator tidak valid.";
 
-        PrintStream originalOut = System.out;
-        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outContent));
+        PrintStream originalErr = System.err;
+        ByteArrayOutputStream errContent = new ByteArrayOutputStream();
+        System.setErr(new PrintStream(errContent));
 
         ConsolePrinter.printError(simulatedErrorMessage);
 
-        System.setOut(originalOut);
+        System.setErr(originalErr); // kembalikan System.err ke default
 
         String expectedOutput = "Error: " + simulatedErrorMessage + System.lineSeparator();
-
-        assertEquals(expectedOutput, outContent.toString());
+        assertEquals(expectedOutput, errContent.toString());
     }
 }

@@ -31,7 +31,7 @@ public class ConsolePrinterPrintWelcomeMessageTest {
         System.setOut(originalOut);
 
         String expectedOutput = "Kalkulator Sederhana" + System.lineSeparator()
-                + "---------------------";
+                + "---------------------"+ System.lineSeparator();
         assertEquals(expectedOutput, outContent.toString());
     }
 }
