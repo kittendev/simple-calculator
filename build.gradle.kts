@@ -45,6 +45,8 @@ tasks.named<Jar>("jar") {
 // and configure test logging
 tasks.test {
     useJUnitPlatform()
+    jvmArgs = listOf("-Duser.language=en", "-Duser.country=US")
+
     testLogging {
         events("passed", "failed")
         exceptionFormat = org.gradle.api.tasks.testing.logging.TestExceptionFormat.FULL
