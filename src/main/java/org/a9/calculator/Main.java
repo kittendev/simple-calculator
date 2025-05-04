@@ -34,6 +34,7 @@ public class Main {
         ConsolePrinter.printWelcomeMessage();
 
         try (Scanner scanner = new Scanner(System.in)){
+            scanner.useLocale(java.util.Locale.US);
             double num1 = InputValidator.getNumber(scanner, "Masukkan angka pertama: ");
             String operator = InputValidator.getOperator(scanner, "Masukkan operator (+, -, *, /): ");
             double num2 = InputValidator.getNumber(scanner, "Masukkan angka kedua: ");
