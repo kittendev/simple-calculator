@@ -1,5 +1,6 @@
 package org.a9.calculator;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 
@@ -34,6 +35,7 @@ public class Main {
         ConsolePrinter.printWelcomeMessage();
 
         try (Scanner scanner = new Scanner(System.in)){
+            scanner.useLocale(Locale.US);
             double num1 = InputValidator.getNumber(scanner, "Masukkan angka pertama: ");
             String operator = InputValidator.getOperator(scanner, "Masukkan operator (+, -, *, /): ");
             double num2 = InputValidator.getNumber(scanner, "Masukkan angka kedua: ");
