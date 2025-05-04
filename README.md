@@ -32,6 +32,7 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#built-with">Built With</a></li>
+        <li><a href="#project-structure">Project Structure</a></li>
       </ul>
     </li>
     <li>
@@ -69,6 +70,44 @@ Aplikasi ini memiliki antarmuka CLI yang sederhana dan mendukung operasi dasar s
 * [![IntelliJ IDEA][IntelliJ.com]][IntelliJ-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+### Project Structure
+```
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── org.a9.calculator
+│   │   │       ├── Calculator.java
+│   │   │       ├── ConsolePrinter.java
+│   │   │       ├── InputValidator.java
+│   │   │       └── Main.java
+│   │   └── resources
+│   │       └── (Kosong / optional resources)
+│
+│   └── test
+│       ├── java
+│       │   └── org.a9.calculator
+│       │       ├── CalculatorAddTest.java
+│       │       ├── CalculatorDivideTest.java
+│       │       ├── CalculatorMultiplyTest.java
+│       │       ├── CalculatorSubtractTest.java
+│       │       ├── CalculatorTest.java
+│       │       ├── ConsolePrinterPrintErrorTest.java
+│       │       ├── ConsolePrinterPrintResultTest.java
+│       │       ├── ConsolePrinterPrintWelcomeMessageTest.java
+│       │       ├── InputNumberValidatorTest.java
+│       │       ├── InputOperatorValidatorTest.java
+│       │       └── MainTest.java
+│       └── resources
+│           └── (Kosong / optional test resources)
+├── build.gradle.kts
+├── gradlew
+├── gradlew.bat
+├── settings.gradle.kts
+├── LICENSE.txt
+└── README.md
+```
 
 
 <!-- GETTING STARTED -->
